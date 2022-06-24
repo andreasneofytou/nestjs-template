@@ -1,11 +1,10 @@
-import { SchoolsModule } from '@app/schools/schools.module';
-import { SchoolSeed } from '@app/seed/school.seed';
+import { Seeder } from '@app/seed/seeder';
 import { Module } from '@nestjs/common';
 import { CommandModule } from 'nestjs-command';
 
 @Module({
-  imports: [SchoolsModule, CommandModule],
-  providers: [SchoolSeed],
-  exports: [SchoolSeed],
+  imports: [CommandModule],
+  providers: [Seeder],
+  exports: [Seeder],
 })
 export class SeedModule {}

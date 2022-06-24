@@ -15,24 +15,15 @@ import { UsersModule } from '@app/users/users.module';
 import { AuthModule } from '@app/auth/auth.module';
 import { JwtGuard } from '@app/guards/jwt.guard';
 import { RolesGuard } from '@app/guards/roles.guard';
-import { ProfilesModule } from '@app/profiles/profiles.module';
-import { InvitationsModule } from '@app/invitations/invitations.module';
-import { ProductsModule } from '@app/products/products.module';
-import { StripeModule } from '@app/stripe/stripe.module';
-import { SubscriptionsModule } from '@app/subscriptions/subscriptions.module';
-import { SchoolsModule } from '@app/schools/schools.module';
 import { AppLoggerMiddleware } from '@app/middlewares/app_logger.middleware';
 import { RouteInfo } from '@nestjs/common/interfaces';
 import { RawBodyMiddleware } from '@app/middlewares/raw_body.middleware';
 import { JsonBodyMiddleware } from '@app/middlewares/json_body.middleware';
 import { join } from 'path';
 import { SeedModule } from '@app/seed/seed.module';
-import { WebhooksModule } from '@app/webhooks/webhooks.module';
 import { AllExceptionsFilter } from '@app/all-exceptions.filter';
 import { HealthModule } from './health/health.module';
 import { ValidationError } from 'class-validator';
-import { number } from 'yargs';
-import { MessagingModule } from './messaging/messaging.module';
 
 @Module({
   imports: [
@@ -60,18 +51,8 @@ import { MessagingModule } from './messaging/messaging.module';
     }),
     UsersModule,
     AuthModule,
-    ProfilesModule,
-    InvitationsModule,
-    ProductsModule,
-    StripeModule.forRoot(process.env.STRIPE_SECRET_KEY, {
-      apiVersion: '2020-08-27',
-    }),
-    SubscriptionsModule,
-    SchoolsModule,
     SeedModule,
-    WebhooksModule,
     HealthModule,
-    MessagingModule,
   ],
   providers: [
     {

@@ -4,7 +4,6 @@ import { compare } from 'bcrypt';
 import { CreateUserDto } from '@app/users/dto/create-user.dto';
 import { UsersService } from '@app/users/users.service';
 import { RegisterDto } from '@app/auth/dto/register.dto';
-import { InvitationsService } from '@app/invitations/invitations.service';
 import { UsersMapper } from '@app/users/users.mapper';
 import { JwtConfig } from '@app/app.config';
 import { ConfigService } from '@nestjs/config';
@@ -24,7 +23,6 @@ export class AuthService {
 
   constructor(
     private readonly usersService: UsersService,
-    private readonly invitationsService: InvitationsService,
     private readonly jwtService: JwtService,
     private readonly usersMapper: UsersMapper,
     configService: ConfigService,
@@ -101,21 +99,6 @@ export class AuthService {
 
     const user: UserDocument = await this.usersService.create(userDto);
     return this.login(user.id, LoginProvider.local);
-  }
-
-  async registerStudent(invitationCode: string): Promise<TokenDto> {
-    const invitation = await this.invitationsService.findActiveInvitation(
-      invitationCode,
-    );
-
-    if (!invitation) {
-      throw new UnauthorizedException();
-    }
-
-    if (await this.usersService.completeUser(invitation.inviteeId)) {
-      await this.invitationsService.markUsedInvitation(invitation.id);
-      return this.login(invitation.inviteeId, LoginProvider.local);
-    }
   }
 
   async verify(token: string): Promise<Boolean> {

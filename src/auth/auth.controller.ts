@@ -21,7 +21,6 @@ import { LocalAuthGuard } from '@app/guards/local-auth.guard';
 import { AuthService } from '@app/auth/auth.service';
 import { LoginDto } from '@app/auth/dto/login.dto';
 import { RegisterDto } from '@app/auth/dto/register.dto';
-import { InvitationLoginDto } from '@app/auth/dto/invitation-login.dto';
 import { JwtRefreshGuard } from '@app/guards/jwt-refresh.guard';
 import { TokenDto } from '@app/auth/dto/token.dto';
 import { AuthGuard } from '@nestjs/passport';
@@ -60,14 +59,6 @@ export class AuthController {
     if (!(await this.authService.verify(token))) {
       throw new BadRequestException();
     }
-  }
-
-  @ApiResponse({ type: TokenDto })
-  @Post('/student-register/')
-  async registerStudent(@Body() invitationLoginDto: InvitationLoginDto) {
-    return await this.authService.registerStudent(
-      invitationLoginDto.invitationCode,
-    );
   }
 
   @Get('/google')
