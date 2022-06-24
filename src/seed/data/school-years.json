@@ -1,0 +1,140 @@
+[
+  {
+    "countryCode": "GB",
+    "name": "Year 1",
+    "order": 1,
+    "isEnabled": false
+  },
+  {
+    "countryCode": "GB",
+    "name": "Year 2",
+    "order": 2,
+    "isEnabled": false
+  },
+  {
+    "countryCode": "GB",
+    "name": "Year 3",
+    "order": 3,
+    "isEnabled": false
+  },
+  {
+    "countryCode": "GB",
+    "name": "Year 4",
+    "order": 4,
+    "isEnabled": true
+  },
+  {
+    "countryCode": "GB",
+    "name": "Year 5",
+    "order": 5,
+    "isEnabled": true
+  },
+  {
+    "countryCode": "GB",
+    "name": "Year 6",
+    "order": 6,
+    "isEnabled": true
+  },
+  {
+    "countryCode": "GB",
+    "name": "Year 7",
+    "order": 7,
+    "isEnabled": true
+  },
+  {
+    "countryCode": "GB",
+    "name": "Year 8",
+    "order": 8,
+    "isEnabled": false
+  },
+  {
+    "countryCode": "GB",
+    "name": "Year 9",
+    "order": 9,
+    "isEnabled": false
+  },
+  {
+    "countryCode": "GB",
+    "name": "Year 10",
+    "order": 10,
+    "isEnabled": false
+  },
+  {
+    "countryCode": "GB",
+    "name": "Year 11",
+    "order": 11,
+    "isEnabled": false
+  },
+
+  {
+    "countryCode": "US",
+    "name": "Grade 1",
+    "order": 1,
+    "isEnabled": false
+  },
+  {
+    "countryCode": "US",
+    "name": "Grade 2",
+    "order": 2
+  },
+  {
+    "countryCode": "US",
+    "name": "Grade 3",
+    "order": 3,
+    "isEnabled": true
+  },
+  {
+    "countryCode": "US",
+    "name": "Grade 4",
+    "order": 4,
+    "isEnabled": true
+  },
+  {
+    "countryCode": "US",
+    "name": "Grade 5",
+    "order": 5,
+    "isEnabled": true
+  },
+  {
+    "countryCode": "US",
+    "name": "Grade 6",
+    "order": 6,
+    "isEnabled": true
+  },
+  {
+    "countryCode": "US",
+    "name": "Grade 7",
+    "order": 7,
+    "isEnabled": false
+  },
+  {
+    "countryCode": "US",
+    "name": "Grade 8",
+    "order": 8,
+    "isEnabled": false
+  },
+  {
+    "countryCode": "US",
+    "name": "Grade 9",
+    "order": 9,
+    "isEnabled": false
+  },
+  {
+    "countryCode": "US",
+    "name": "Grade 10",
+    "order": 10,
+    "isEnabled": false
+  },
+  {
+    "countryCode": "US",
+    "name": "Grade 11",
+    "order": 11,
+    "isEnabled": false
+  },
+  {
+    "countryCode": "US",
+    "name": "Grade 12",
+    "order": 12,
+    "isEnabled": false
+  }
+]
